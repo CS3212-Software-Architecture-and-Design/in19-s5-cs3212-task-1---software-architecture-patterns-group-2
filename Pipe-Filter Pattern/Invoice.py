@@ -38,6 +38,10 @@ class Invoice:
         if "FinalTotalPrice" in self.__details.keys():
             return self.__details["FinalTotalPrice"] # Overall total price to be paid
 
+    def getTotalDiscount(self):
+        if "TotalDiscount" in self.__details.keys():
+            return self.__details["TotalDiscount"] # total discount 
+
     def getFileName(self):
         return self.__file
 
