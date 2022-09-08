@@ -15,7 +15,7 @@ class WriteFilter(AbstractFilter):
 
         finalTotalDiscount_str = "Total discount: " + str(details_dict['TotalDiscount']) + '\n'
         del details_dict['TotalDiscount']
-        finalTotalPrice_str = "Total price: " + str(details_dict['FinalTotalPrice']) + '\n'
+        finalTotalPrice_str = "Total price: " + str(details_dict['FinalTotalPrice'])
         del details_dict['FinalTotalPrice']
 
         outlst = []
