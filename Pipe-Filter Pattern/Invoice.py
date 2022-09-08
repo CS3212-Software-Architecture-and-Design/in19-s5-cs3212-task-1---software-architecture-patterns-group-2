@@ -24,19 +24,23 @@ class Invoice:
 
     def getDiscountAmounts(self):
         if "DiscountAmounts" in self.__details.keys():
-            return self.__details["DiscountAmounts"]
+            return self.__details["DiscountAmounts"] #a list with the discounted amounts for each item
 
     def getTotalPrices(self):
         if "TotalPrices" in self.__details.keys():
-            return self.__details["TotalPrices"]
+            return self.__details["TotalPrices"] #a list with the unit_price*quantity values for each item
+
+    def getFinalPrices(self):
+        if "FinalPrices" in self.__details.keys():
+            return self.__details["FinalPrices"] #a list with the final prices(including discounts) for each item
+    
+    def getFinalTotalPrice(self):
+        if "FinalTotalPrice" in self.__details.keys():
+            return self.__details["FinalTotalPrice"] # Overall total price to be paid
 
     def getTotalDiscount(self):
         if "TotalDiscount" in self.__details.keys():
-            return self.__details["TotalDiscount"]
-
-    def getFinalPrice(self):
-        if "FinalPrice" in self.__details.keys():
-            return self.__details["FinalPrice"]
+            return self.__details["TotalDiscount"] # total discount 
 
     def getFileName(self):
         return self.__file
