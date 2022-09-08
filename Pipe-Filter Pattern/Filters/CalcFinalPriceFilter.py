@@ -5,9 +5,9 @@ from Invoice import Invoice
 class CalcFinalPriceFilter(AbstractFilter):
     def process(self, invoice: Invoice) -> Invoice:
         # get the list with the unit_price*quantity values for each item
-        totalPrices = invoice.getTotalPrices(invoice)
+        totalPrices = invoice.getTotalPrices()
         # get list with the discounted amounts for each item
-        discountAmounts = invoice.getDiscountAmounts(invoice)
+        discountAmounts = invoice.getDiscountAmounts()
         finalPrices = []
         for i in range(len(totalPrices)):
             # final price of the item = total price of the item - discount amount of the item

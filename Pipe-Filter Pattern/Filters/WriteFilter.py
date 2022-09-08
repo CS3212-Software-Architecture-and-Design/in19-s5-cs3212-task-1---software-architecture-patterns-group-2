@@ -13,8 +13,8 @@ class WriteFilter(AbstractFilter):
 
         details_dict = invoice.getDetailsDict()
 
-        finalTotalDiscount_str = "Total discount: " + str(details_dict['FinalTotalDiscount']) + '\n'
-        del details_dict['FinalTotalDiscount']
+        finalTotalDiscount_str = "Total discount: " + str(details_dict['TotalDiscount']) + '\n'
+        del details_dict['TotalDiscount']
         finalTotalPrice_str = "Total price: " + str(details_dict['FinalTotalPrice']) + '\n'
         del details_dict['FinalTotalPrice']
 
