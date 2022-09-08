@@ -50,7 +50,15 @@ class Invoice:
 
     def setDetailsDict(self, dict):
         self.__details = dict
+
+    def setQuantites(self, lst):
+        self.__details["Quantities"] = lst
+
+    def setUnitPrices(self, lst):
+        self.__details["UnitPrices"] = lst
         
+    def setTotalPrices(self, lst):
+        self.__details["TotalPrices"] = lst
     
 
 
