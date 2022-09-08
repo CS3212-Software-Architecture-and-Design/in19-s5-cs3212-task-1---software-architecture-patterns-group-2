@@ -47,6 +47,9 @@ class Invoice:
 
     def getDetailsDict(self):
         return self.__details
+
+    def setDetailsDict(self, dict):
+        self.__details = dict
         
     
 
