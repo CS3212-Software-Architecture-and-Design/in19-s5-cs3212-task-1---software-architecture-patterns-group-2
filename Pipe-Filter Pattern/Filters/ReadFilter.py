@@ -15,7 +15,7 @@ class ReadFilter(AbstractFilter):
             for line in lst:
                 tempLst.append(line[i])
             invoice.getDetailsDict()[keysList[i]] = tempLst
-        print(invoice.getDetailsDict())
+        #print(invoice.getDetailsDict())
         file.close()
                 
         return invoice
