@@ -59,7 +59,5 @@ class Invoice:
         
     def setTotalPrices(self, lst):
         self.__details["TotalPrices"] = lst
-    
-
 
 
