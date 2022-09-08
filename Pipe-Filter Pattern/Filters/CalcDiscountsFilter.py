@@ -3,7 +3,6 @@ from Invoice import Invoice
 import os
 class CalcDiscountsFilter(AbstractFilter):
     def process(self, invoice: Invoice) -> Invoice:
-        # totalPriceList = ['300', '380', '120', '1000']
         totalPriceList = invoice.getTotalPrices()
         discountList = invoice.getDiscounts()
         discountAmounts = []
@@ -12,6 +11,6 @@ class CalcDiscountsFilter(AbstractFilter):
         detailsDict = invoice.getDetailsDict()
         detailsDict["DiscountAmounts"] = discountAmounts
         detailsDict["TotalDiscount"] =  sum(discountAmounts)
-        print (detailsDict)
+        print (invoice.getDetailsDict())
                 
         return invoice
