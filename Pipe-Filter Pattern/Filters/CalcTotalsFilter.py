@@ -9,7 +9,7 @@ class CalcTotalsFilter(AbstractFilter):
 
         for i in range(len(unitPriceLst)):
             totalPriceLst.append(float(unitPriceLst[i]) * int(quantityLst[i]))
-        invoice.getDetailsDict()["TotalPrices"] = totalPriceLst
+        invoice.setTotalPrices(totalPriceLst)
 
         print(invoice.getDetailsDict()["TotalPrices"])
         
