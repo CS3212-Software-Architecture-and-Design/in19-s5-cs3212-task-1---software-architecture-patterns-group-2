@@ -11,6 +11,10 @@ class CalcTotalsFilter(AbstractFilter):
             totalPriceLst.append(float(unitPriceLst[i]) * int(quantityLst[i]))
         invoice.setTotalPrices(totalPriceLst)
 
-        #print(invoice.getDetailsDict()["TotalPrices"])
+        ## print(invoice.getDetailsDict()["TotalPrices"])
+
+        # print("calctotal")
+        # print(invoice.getDetailsDict())
+        # print()
         
         return invoice

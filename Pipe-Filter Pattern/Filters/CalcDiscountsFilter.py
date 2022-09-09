@@ -12,5 +12,8 @@ class CalcDiscountsFilter(AbstractFilter):
         detailsDict["DiscountAmounts"] = discountAmounts
         detailsDict["TotalDiscount"] =  sum(discountAmounts)
         #print (invoice.getDetailsDict())
+        # print("calcdisc")
+        # print(invoice.getDetailsDict())
+        # print()
                 
         return invoice
