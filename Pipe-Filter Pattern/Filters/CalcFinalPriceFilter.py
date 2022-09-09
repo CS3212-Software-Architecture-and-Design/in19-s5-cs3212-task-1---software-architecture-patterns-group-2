@@ -16,4 +16,8 @@ class CalcFinalPriceFilter(AbstractFilter):
             invoice.getDetailsDict()["FinalTotalPrice"] = sum(
                 finalPrices)  # get the sum of final prices of the items
 
+        # print("calcfinal")
+        # print(invoice.getDetailsDict())
+        # print()
+
         return invoice
