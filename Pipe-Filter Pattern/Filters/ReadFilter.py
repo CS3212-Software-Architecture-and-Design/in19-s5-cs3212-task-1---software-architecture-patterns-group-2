@@ -8,8 +8,10 @@ class ReadFilter(AbstractFilter):
         rel_path = "../TextFiles/"+invoice.getFileName()
         abs_file_path = os.path.join(script_dir, rel_path)
         file = open(abs_file_path,"r")
-        lst= [line.split(",") for line in file.read().split("\n")]
-        keysList = ["ItemNames", "UnitPrices","Quantities","Discounts"]
+        lst= [[item.strip() for item in line.strip().split("|")] for line in file.read().split("\n")]
+    
+        #print(lst)
+        keysList = lst.pop(0)
         for i in range(len(keysList)):
             tempLst=[]
             for line in lst:
