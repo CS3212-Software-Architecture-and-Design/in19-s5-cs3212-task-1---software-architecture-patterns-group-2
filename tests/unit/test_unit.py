@@ -61,14 +61,14 @@ class TestFilters(unittest.TestCase):
             'FinalPrices': [300.0, 364.8, 114.0, 980.0], 
             'FinalTotalPrice': 1758.8
         }
-        invoice = Invoice("")
+        invoice = Invoice("f1.txt")
         invoice.setDetailsDict(test_dict)
 
         writeFilter = WriteFilter.WriteFilter()
         writeFilter.process(invoice)
 
         script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-        rel_path = "../../Pipe-Filter Pattern/TextFiles/Output.txt"
+        rel_path = "../../Pipe-Filter Pattern/TextFiles/Invoice_f1.txt"
         abs_file_path = os.path.join(script_dir, rel_path)
         file = open(abs_file_path,"r")
 

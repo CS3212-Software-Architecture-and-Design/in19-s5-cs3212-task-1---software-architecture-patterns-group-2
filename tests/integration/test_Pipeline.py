@@ -108,7 +108,7 @@ class TestPipeline(unittest.TestCase):
         self.pipeline.generateInvoice(self.invoice)
 
         script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-        rel_path = "../../Pipe-Filter Pattern/TextFiles/Output.txt"
+        rel_path = "../../Pipe-Filter Pattern/TextFiles/Invoice_f1.txt"
         abs_file_path = os.path.join(script_dir, rel_path)
         file = open(abs_file_path,"r")
 
