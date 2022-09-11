@@ -9,7 +9,12 @@ class Pipeline:
     def generateInvoice(self, invoiceObj:Invoice):
         for filter in self.__filters:
             invoiceObj = filter.process(invoiceObj)
-        print("Invoice is generated")
+            if invoiceObj.getError()==1:
+                break
+        if invoiceObj.getError()==1:
+            print("Programme Terminated!")
+        else:
+            print("Invoice is Generated")
 
     def appendFilter(self, filter:AbstractFilter):
         self.__filters.append(filter)

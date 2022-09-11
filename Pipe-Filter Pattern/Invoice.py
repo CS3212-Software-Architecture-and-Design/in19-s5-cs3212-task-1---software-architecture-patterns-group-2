@@ -2,9 +2,11 @@ class Invoice:
 
     __file = None
     __details = None
+    __error = None
     def __init__(self, txtFile) -> None:
         self.__file = txtFile
         self.__details={}
+        self.__error = 0
 
     def getItemNames(self):
         if "ItemNames" in self.__details.keys():
@@ -59,5 +61,11 @@ class Invoice:
         
     def setTotalPrices(self, lst):
         self.__details["TotalPrices"] = lst
+
+    def getError(self):
+        return self.__error
+
+    def setError(self,val):
+        self.__error = val
 
 

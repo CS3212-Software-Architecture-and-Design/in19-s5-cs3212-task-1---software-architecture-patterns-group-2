@@ -7,7 +7,7 @@ class WriteFilter(AbstractFilter):
     def process(self, invoice: Invoice) -> Invoice:
 
         script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-        rel_path = "../TextFiles/Output.txt"
+        rel_path = "../TextFiles/Invoice_"+invoice.getFileName()
         abs_file_path = os.path.join(script_dir, rel_path)
         file = open(abs_file_path,"w")
 

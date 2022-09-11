@@ -4,7 +4,10 @@ from Filters import CalcDiscountsFilter, CalcFinalPriceFilter, CalcTotalsFilter,
 
 pipeline = Pipeline([ReadFilter.ReadFilter(), CalcTotalsFilter.CalcTotalsFilter(), CalcDiscountsFilter.CalcDiscountsFilter(), CalcFinalPriceFilter.CalcFinalPriceFilter(), WriteFilter.WriteFilter()])
 
-fileName = input("Enter the path for the file : ")
+try:
+    fileName = input("Enter the path for the file : ")
+except:
+    pass
 invoiceObj = Invoice(fileName)
 pipeline.generateInvoice(invoiceObj)
 
